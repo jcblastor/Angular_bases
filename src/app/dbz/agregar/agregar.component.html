@@ -1,0 +1,23 @@
+<h3>Agregar: <small>{{nuevo.nombre}}</small></h3>
+<hr>
+<!-- Cuando necesitamos tener los datos del evento enviamos $event -->
+<form (ngSubmit)="agregar()">
+  <!-- [value]="nuevo.nombre"
+    (input)="cambiarNombre($event)" -->
+
+  <!-- Two way data bindig, Emite y escucha el evento [()]="" -->
+  <input
+    type="text"
+    name="nombre"
+    placeholder="Nombre"
+    [(ngModel)]="nuevo.nombre"
+  />
+  <input
+    type="number"
+    name="poder"
+    placeholder="Poder"
+    [(ngModel)]="nuevo.poder"
+  />
+
+  <button type="submit">Agregar</button>
+</form>
